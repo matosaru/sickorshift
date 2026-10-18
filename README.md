@@ -17,7 +17,7 @@ The game is a lighthearted reminder to check in with yourself about rest, health
 5. After the **third roll**, the option that appeared **at least twice wins**. A full-screen celebration shows your name, the winner, confetti, and an animated congratulations GIF.
 6. Choose **See results**, **Play again**, or **Reset** to start over.
 
-Each dice outcome has roughly a 50/50 chance. The 3-roll match always produces a majority result because the total number of rolls is odd.
+Each roll is independent. The winning categories have an exact 50/50 probability (even versus odd), and each of the six faces has an equal probability. The 3-roll match always produces a majority result because the total number of rolls is odd. The game uses `crypto.getRandomValues()` with rejection sampling to avoid modulo bias; `Math.random()` is used only for cosmetic animation frames. This is cryptographically secure pseudorandomness, not a physical true-random source.
 
 ## ✨ Features
 
